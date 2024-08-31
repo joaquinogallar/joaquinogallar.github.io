@@ -180,6 +180,7 @@ header {
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .p-titleContainer {
@@ -198,3 +199,70 @@ header {
   font-size: 1.1rem;
   font-weight: 700;
 }
+
+.p-card {
+  background: var(--primary);
+  border-radius: 5px;
+  color: var(--text-dark);
+}
+
+.p-card .p-cardTitle {
+  font-size: 1.4rem;
+  padding: 0.5rem 0.8rem;
+}
+
+.p-card .p-cardImg {
+  width: 100%;
+  object-fit: contain;
+}
+
+.p-card .p-cardDescription {
+  padding: 0.5rem 0.8rem;
+}
+
+.p-card .p-cardDescription .p-cardSubtitle {
+  color: var(--secondary);
+  font-family: "Merriweather";
+  font-size: 1.2rem;
+}
+
+.p-card .p-cardDescription .p-cardParagraph {
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+.p-card .p-cardLinksContainer {
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  gap: 16px;
+}
+
+.p-card .p-cardLinksContainer .p-githubLink img {
+  width: 22px;
+  margin-left: -6px;
+}
+
+.p-card .p-cardLinksContainer .p-githubLink {
+  color: var(--text-light);
+  background: var(--bg-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  display: flex;
+  width: fit-content;
+  gap: 8px;
+  align-items: center;
+}
+
+.p-card .p-cardLinksContainer .p-pageLink {
+  color: var(--secondary);
+  border: 3px solid var(--secondary);
+  border-radius: 50px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+  font-weight: 700;
+}
+
+/* skills */
