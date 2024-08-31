@@ -10,7 +10,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   margin: 0;
   padding: 0;
 }
@@ -37,6 +38,19 @@ body {
 
 .s-light {
   background: var(--bg-light);
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 100;
+  display: flex;
+}
+
+.h-container {
+  max-width: 90%;
 }
 
 /* main styles */
@@ -110,5 +124,36 @@ body {
 .am-paragraph {
   opacity: 0.6;
   line-height: 1.5;
-  width: 70%;
+  width: 75%;
+  margin-top: 1.5rem;
+}
+
+.am-c-container {
+  margin-top: 3rem;
+  line-height: 0.8;
+}
+
+.am-c-titleContainer .am-c-title {
+  font-family: "Merriweather";
+  font-size: 1.8rem;
+  opacity: 0.6;
+}
+
+.am-c-paragraph {
+  opacity: 0.2;
+  margin-left: 2px;
+}
+
+.am-c-socialContainer {
+  display: flex;
+  gap: 14px;
+  margin-top: 1rem;
+}
+
+.am-c-socialCard {
+  width: 30px;
+  height: 30px;
+  background: var(--bg-dark);
+  opacity: 0.4;
+  border-radius: 5px;
 }
