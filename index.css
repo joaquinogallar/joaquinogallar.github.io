@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+/* color variables */
+:root {
+  --bg-dark: #272727;
+  --bg-light: #ebcdc3;
+  --text-dark: #141414;
+  --text-light: #eaeaea;
+  --primary: #d1b2a7;
+  --secondary: #94776d;
+}
+
+/* styles */
+body {
+  background: var(--bg-dark);
+}
+
+.s-light {
+  background: var(--bg-light);
+}
+
+/* main styles */
+.m-section {
+  color: var(--text-light);
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.m-container {
+  width: 90%;
+}
+
+.m-titleContainer .m-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.m-titleContainer .m-subtitle {
+  width: 240px;
+  color: var(--primary);
+  opacity: 0.6;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.m-btn {
+  font-size: 1.1rem;
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  opacity: 0.4;
+  padding: 0.4rem 1.6rem;
+  position: absolute;
+  bottom: 2rem;
+}
+
+/* about me */
+.am-section {
+  display: flex;
+  justify-content: center;
+}
+
+.am-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  max-width: 90%;
+  width: 100%;
+}
+
+.am-titleContainer {
+  line-height: 1;
+}
+
+.am-titleContainer .am-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.am-titleContainer .am-subtitle {
+  font-family: "Merriweather";
+  font-size: 1.1rem;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.am-paragraph {
+  opacity: 0.6;
+  line-height: 1.5;
+  width: 70%;
+}
