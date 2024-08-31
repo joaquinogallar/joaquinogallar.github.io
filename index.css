@@ -45,12 +45,17 @@ header {
   position: fixed;
   width: 100%;
   height: 60px;
-  z-index: 100;
-  display: flex;
 }
 
 .h-container {
   max-width: 90%;
+  margin: 1rem auto;
+}
+
+.h-container img {
+  width: 30px;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 /* main styles */
@@ -95,6 +100,7 @@ header {
 .am-section {
   display: flex;
   justify-content: center;
+  height: 80vh;
 }
 
 .am-container {
@@ -153,7 +159,42 @@ header {
 .am-c-socialCard {
   width: 30px;
   height: 30px;
-  background: var(--bg-dark);
   opacity: 0.4;
   border-radius: 5px;
+}
+
+.am-c-socialCard img {
+  width: 100%;
+  height: 100%;
+}
+
+/* projects */
+.p-section {
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+}
+
+.p-container {
+  max-width: 90%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-titleContainer {
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.p-titleContainer .p-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.p-titleContainer .p-subtitle {
+  color: var(--primary);
+  font-family: "Merriweather";
+  font-size: 1.1rem;
+  font-weight: 700;
 }
