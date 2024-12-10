@@ -219,17 +219,16 @@ About me
   align-items: center;
 
   border-radius: 10px;
-  border: .5px rgba(255, 255, 255, 0.2) solid;
+  outline: .5px rgba(255, 255, 255, 0.2) solid;
 
   background-repeat: no-repeat;
   background-size: cover;
+
+  transition: all 200ms ease-in-out;
 }
 
-.am-c p {
-  color: var(--text-color);
-  font-size: 32px;
-  font-weight: 500;
-  z-index: 2;
+.am-c:hover {
+  scale: 1.01;
 }
 
 .am-c::before {
@@ -240,10 +239,16 @@ About me
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.35); 
+  background-color: #313C4D40; 
   z-index: 1;
 }
 
+.am-c p {
+  color: var(--text-color);
+  font-size: 32px;
+  font-weight: 500;
+  z-index: 2;
+}
 
 #am-c-linkedIn {
   grid-column: 1; 
@@ -256,6 +261,7 @@ About me
   grid-row: 1;
   background-image: url("./assets/img/github.png");
   background-position: center;
+
 }
 
 #am-c-cv {
