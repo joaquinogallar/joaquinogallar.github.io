@@ -129,35 +129,23 @@ My experience
 }
 
 .me-container {
+  z-index: 1;
   position: relative;
 
   width: 65%;
   min-width: 400px;
   padding: 1.5rem 2rem;
 
+  background: linear-gradient(180deg, rgba(14,19,25,0.2) 0%, rgba(14,19,25,1) 100%);
+
   border: 0.5px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  z-index: 1; /* Para asegurarse que el contenido esté encima */
 }
 
-.me-background {
-  z-index: -1; /* Mantener el fondo detrás del contenido */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  filter: drop-shadow(0px 8px 12px #000) drop-shadow(0px 4px 4px #000);
-  background-color: var(--secundary-color);
-  opacity: 0.3;
-  border-radius: 10px;
-  
-}
 
 #me-e-btn-more {
   font-size: 16px;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 10px;
 }
 
@@ -206,4 +194,81 @@ About me
 .highlight-text-2 {
   color: var(--text-color);
   opacity: .6;
+}
+
+.am-contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+  
+  margin: auto;
+  margin-top: 4rem;
+
+  max-width: 95%;
+  height: 500px;
+  gap: 20px;
+}
+
+.am-c {
+  position: relative;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  border: .5px rgba(255, 255, 255, 0.2) solid;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.am-c p {
+  color: var(--text-color);
+  font-size: 32px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.am-c::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.35); 
+  z-index: 1;
+}
+
+
+#am-c-linkedIn {
+  grid-column: 1; 
+  grid-row: 1 / 3; 
+  background-image: url("./assets/img/linkedin.png");
+}
+
+#am-c-gitHub {
+  grid-column: 2; 
+  grid-row: 1;
+  background-image: url("./assets/img/github.png");
+  background-position: center;
+}
+
+#am-c-cv {
+  grid-column: 2;
+  grid-row: 2;
+  background-image: url("./assets/img/cv.png");
+}
+
+/*
+>>>>>>>>>>
+Footer
+<<<<<<<<<<
+*/
+#footer {
+  background-color: #000;
 }
