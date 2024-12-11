@@ -148,7 +148,7 @@ My experience
   margin-bottom: 4rem;
 }
 
-.me-e-container img {
+.me-e-container .me-e-c-img {
   width: 350px;
   height: 350px;
 
@@ -191,20 +191,35 @@ My experience
 }
 
 .me-e-i-links a {
-  padding: .1rem 2rem;
+  width: 140px;
+  padding: .4rem;
   display: flex;
-  justify-content: center;
+  align-items: center;
   border-radius: 1000px;
   font-size: 18px;
   font-weight: 200;
+}
+
+#no-projects {
+  margin: 2rem 0;
+  opacity: .6;
+  font-weight: 400;
 }
 
 #gh-link {
   background: #000;
 }
 
+#gh-link img {
+  width: 32px;
+  height: 32px;
+  filter: invert(100%);
+  margin-right: 1rem;
+}
+
 #more-link {
   border: 1px var(--primary-color) solid;
+  justify-content: center;
 }
 
 #me-e-btn-more {
