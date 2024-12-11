@@ -132,7 +132,7 @@ My experience
   z-index: 1;
   position: relative;
 
-  width: 65%;
+  width: 50%;
   min-width: 400px;
   padding: 1.5rem 2rem;
 
@@ -142,6 +142,70 @@ My experience
   border-radius: 10px;
 }
 
+.me-e-container {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.me-e-container img {
+  width: 350px;
+  height: 350px;
+
+  object-fit: cover;
+  border-radius: 10px;
+  border: .5px rgba(255, 255, 255, .2) solid;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.me-e-information {
+  margin-left: 2rem;
+}
+
+.me-e-information div {
+  margin-bottom: 2rem;
+}
+
+.me-e-i-text p {
+  opacity: .6;
+  font-weight: 200;
+}
+
+.me-e-t-images {
+  display: flex;
+  gap: 1rem;
+}
+
+.me-e-t-images img {
+  width: 42px;
+  height: 42px;
+}
+
+.me-e-i-links {
+  display: flex;
+  gap: 20px;
+}
+
+.me-e-i-links a {
+  padding: .1rem 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 1000px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+#gh-link {
+  background: #000;
+}
+
+#more-link {
+  border: 1px var(--primary-color) solid;
+}
 
 #me-e-btn-more {
   font-size: 16px;

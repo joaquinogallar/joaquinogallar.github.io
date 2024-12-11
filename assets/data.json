@@ -5,14 +5,14 @@
         "title": "something",
         "description": "description of the project, some random text so I can see if the text styles correctly and there is no error with that. Also I need to test differents sizes of texts :b",
         "techs": ["JS", "JAVA", "PY", "HTML", "CSS"],
-        "github": ""
+        "github": "https://github.com/"
     },
     {
-        "id": 0,
+        "id": 1,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhw2y89p1EKLzIV9iEjCOW8rZCQmg5VJy25A&s",
         "title": "something",
         "description": "description of the project, some random text so I can see if the text styles correctly and there is no error with that. Also I need to test differents sizes of texts :b",
         "techs": ["JS", "JAVA", "PY", "HTML", "CSS"],
-        "github": ""
+        "github": "https://github.com/"
     }
 ]
