@@ -64,6 +64,10 @@ button {
   color: var(--text-color);
 }
 
+a img {
+  vertical-align: middle;
+}
+
 /* 
 >>>>>>>>>>
 Header
@@ -86,11 +90,62 @@ Header
   font-weight: 500;
 }
 
+.h-contact-container {
+  display: flex;
+  gap: 14px;
+}
+
+.h-contact-container img {
+  height: 40px;
+}
+
 /*
 >>>>>>>>>>
 Main
 <<<<<<<<<<
 */
+.oval {
+  position: absolute;
+  z-index: -1;
+
+  filter: blur(50px);
+
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  opacity: .5;
+}
+
+#oval0 {
+  left: 0;
+  top: -60px;
+  opacity: .6;
+
+  filter: blur(80px);
+  
+  height: 100px;
+  width: 100%;
+}
+
+#oval1 {
+  transform: rotate(130deg);
+
+  left: 22%;
+  top: 35%;
+
+  height: 100px;
+  width: 600px;
+}
+
+#oval2 {
+  transform: rotate(45deg);
+
+  right: 12%;
+  bottom: 25%;
+
+  height: 100px;
+  width: 1000px;
+}
+
 #main-section {
   display: flex;
   flex-direction: column;
@@ -131,6 +186,7 @@ My experience
 .me-container {
   z-index: 1;
   position: relative;
+  overflow: hidden;
 
   width: 50%;
   min-width: 400px;
@@ -213,13 +269,17 @@ My experience
 #gh-link img {
   width: 32px;
   height: 32px;
-  filter: invert(100%);
   margin-right: 1rem;
 }
 
 #more-link {
   border: 1px var(--primary-color) solid;
   justify-content: center;
+  transition: all 200ms ease-in-out;
+}
+
+#more-link:hover {
+  background-color: #313C4D30;
 }
 
 #me-e-btn-more {

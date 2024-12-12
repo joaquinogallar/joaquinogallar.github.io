@@ -66,7 +66,7 @@ const getProjects = async () => {
             techsContainer.classList.add("me-e-t-images")
             proj.techs.forEach(t => {
                 let tImg = d.createElement("img")
-                tImg.src = `./img/techs/${t}.png`
+                tImg.src = `./assets/img/techs/${t}.svg`
                 techsContainer.appendChild(tImg)            
             })
             
