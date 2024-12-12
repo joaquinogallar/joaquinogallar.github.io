@@ -1,5 +1,5 @@
 /* Imports */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 /* Universal box-sizing and margin/padding reset */
 *,
@@ -11,7 +11,8 @@
 }
 
 /* Remove list styles */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -29,16 +30,18 @@ img {
 
 /* Color variables */
 :root {
-  --primary-color: #313C4D;
-  --secundary-color: #0E1319;
-  --background-color: #0D1117;
-  --bg-color-secundary: #141A21;
+  --primary-color: #313c4d;
+  --secundary-color: #0e1319;
+  --background-color: #0d1117;
+  --bg-color-secundary: #141a21;
 
   --text-color: #fafafa;
 }
 
 .roboto-mono {
-  font-family: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .subtitle {
@@ -49,7 +52,9 @@ img {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 section {
@@ -60,7 +65,9 @@ button {
   background: var(--primary-color);
   border: none;
   cursor: pointer;
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   color: var(--text-color);
 }
 
@@ -76,7 +83,7 @@ Header
 #header-section {
   height: 70px;
   padding: 0 2rem;
-  border-bottom: .5px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
 
   display: flex;
   justify-content: space-between;
@@ -112,16 +119,16 @@ Main
 
   background-color: var(--primary-color);
   border-radius: 100%;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 #oval0 {
   left: 0;
   top: -60px;
-  opacity: .6;
+  opacity: 0.6;
 
   filter: blur(80px);
-  
+
   height: 100px;
   width: 100%;
 }
@@ -169,7 +176,7 @@ Main
   font-size: 24px;
   font-weight: 300;
 
-  opacity: .4;
+  opacity: 0.4;
 }
 
 /*
@@ -192,7 +199,11 @@ My experience
   min-width: 400px;
   padding: 1.5rem 2rem;
 
-  background: linear-gradient(180deg, rgba(14,19,25,0.2) 0%, rgba(14,19,25,1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(14, 19, 25, 0.2) 0%,
+    rgba(14, 19, 25, 1) 100%
+  );
 
   border: 0.5px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
@@ -204,13 +215,22 @@ My experience
   margin-bottom: 4rem;
 }
 
-.me-e-container .me-e-c-img {
-  width: 350px;
+.odd-project {
+  flex-direction: row-reverse;
+}
+
+.odd-project .me-e-information {
+  margin-left: 0;
+  margin-right: 2rem;
+}
+
+.me-e-c-img {
+  min-width: 350px;
   height: 350px;
 
   object-fit: cover;
   border-radius: 10px;
-  border: .5px rgba(255, 255, 255, .2) solid;
+  border: 0.5px rgba(255, 255, 255, 0.2) solid;
 }
 
 .project-title {
@@ -227,12 +247,13 @@ My experience
 }
 
 .me-e-i-text p {
-  opacity: .6;
+  opacity: 0.6;
   font-weight: 200;
 }
 
 .me-e-t-images {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -243,12 +264,13 @@ My experience
 
 .me-e-i-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .me-e-i-links a {
   width: 140px;
-  padding: .4rem;
+  padding: 0.4rem;
   display: flex;
   align-items: center;
   border-radius: 1000px;
@@ -258,7 +280,7 @@ My experience
 
 #no-projects {
   margin: 2rem 0;
-  opacity: .6;
+  opacity: 0.6;
   font-weight: 400;
 }
 
@@ -279,13 +301,25 @@ My experience
 }
 
 #more-link:hover {
-  background-color: #313C4D30;
+  background-color: #313c4d30;
 }
 
 #me-e-btn-more {
   font-size: 16px;
   padding: 0.6rem 1rem;
   border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .me-e-container {
+    flex-direction: column;
+  }
+
+  .me-e-information {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
 }
 
 /*
@@ -301,8 +335,8 @@ About me
 
   padding: 6rem 0;
   margin-top: -3rem;
-  border-top: .5px rgba(255, 255, 255, 0.1) solid;
-  border-bottom: .5px rgba(255, 255, 255, 0.1) solid;
+  border-top: 0.5px rgba(255, 255, 255, 0.1) solid;
+  border-bottom: 0.5px rgba(255, 255, 255, 0.1) solid;
 
   background-color: var(--bg-color-secundary);
 }
@@ -316,30 +350,30 @@ About me
   margin: 2rem 0;
 }
 
-.am-container p {  
+.am-container p {
   font-weight: 300;
   font-size: 20px;
 
-  color: #72767A;
+  color: #72767a;
 }
 
 .highlight-text-1 {
   font-weight: 400;
 
   color: var(--text-color);
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .highlight-text-2 {
   color: var(--text-color);
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .am-contact-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  
+
   margin: auto;
   margin-top: 4rem;
 
@@ -358,7 +392,7 @@ About me
   align-items: center;
 
   border-radius: 10px;
-  outline: .5px rgba(255, 255, 255, 0.2) solid;
+  outline: 0.5px rgba(255, 255, 255, 0.2) solid;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -371,14 +405,14 @@ About me
 }
 
 .am-c::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: #313C4D40; 
+  background-color: #313c4d40;
   z-index: 1;
 }
 
@@ -390,23 +424,46 @@ About me
 }
 
 #am-c-linkedIn {
-  grid-column: 1; 
-  grid-row: 1 / 3; 
+  grid-column: 1;
+  grid-row: 1 / 3;
   background-image: url("./assets/img/linkedin.png");
 }
 
 #am-c-gitHub {
-  grid-column: 2; 
+  grid-column: 2;
   grid-row: 1;
   background-image: url("./assets/img/github.png");
   background-position: center;
-
 }
 
 #am-c-cv {
   grid-column: 2;
   grid-row: 2;
   background-image: url("./assets/img/cv.png");
+}
+
+/*
+>>>>>>>>>>
+Skills
+<<<<<<<<<
+*/
+.am-skills-container {
+  margin-top: 4rem;
+}
+
+.am-skills-container h2 {
+  margin-bottom: 1rem;
+}
+
+.am-s-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+.am-s-container img {
+  width: 82px;
 }
 
 /*
