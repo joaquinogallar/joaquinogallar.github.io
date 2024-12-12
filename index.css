@@ -102,7 +102,7 @@ Header
   gap: 14px;
 }
 
-.h-contact-container img {
+.h-contact-container a img {
   height: 40px;
 }
 
@@ -115,11 +115,11 @@ Main
   position: absolute;
   z-index: -1;
 
-  filter: blur(50px);
+  filter: blur(60px);
 
   background-color: var(--primary-color);
   border-radius: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 #oval0 {
@@ -170,6 +170,7 @@ Main
   font-size: 64px;
   letter-spacing: -1px;
   line-height: 80px;
+  margin: 0 1rem;
 }
 
 .m-title-container p {
@@ -201,7 +202,7 @@ My experience
 
   background: linear-gradient(
     180deg,
-    rgba(14, 19, 25, 0.2) 0%,
+    rgba(49, 60, 77, 10%) 0%,
     rgba(14, 19, 25, 1) 100%
   );
 
@@ -308,18 +309,6 @@ My experience
   font-size: 16px;
   padding: 0.6rem 1rem;
   border-radius: 10px;
-}
-
-/* Responsive */
-@media (max-width: 1400px) {
-  .me-e-container {
-    flex-direction: column;
-  }
-
-  .me-e-information {
-    margin-top: 1rem;
-    margin-left: 0;
-  }
 }
 
 /*
@@ -473,4 +462,71 @@ Footer
 */
 #footer {
   background-color: #000;
+}
+
+/*
+>>>>>>>>>>
+Responsive
+<<<<<<<<<<
+*/
+@media (max-width: 1400px) {
+  .me-e-container {
+    flex-direction: column;
+  }
+
+  .me-e-information {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .m-title-container h1 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  .m-title-container p {
+    font-size: 18px;
+  }
+
+  .me-e-c-img {
+    min-width: 0px;
+  }
+
+  @media (max-width: 500px) {
+    #header-section {
+      padding: 0 1rem;
+    }
+
+    #header-section p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .h-contact-container a img {
+      height: 30px;
+    }
+
+    #main-section {
+      height: 85vh;
+    }
+
+    .m-title-container h1 {
+      font-size: 42px;
+      line-height: 60px;
+    }
+
+    .m-title-container p {
+      font-size: 16px;
+    }
+
+    #about-me-section {
+      padding: 6rem 1.5rem;
+    }
+    .am-container {
+      min-width: 0;
+      max-width: none;
+    }
+  }
 }
