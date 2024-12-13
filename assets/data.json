@@ -10,9 +10,9 @@
     {
         "id": 1,
         "image": "https://i.imgur.com/QbYKDfl.png",
-        "title": "something",
-        "description": "description of the project, some random text so I can see if the text styles correctly and there is no error with that. Also I need to test differents sizes of texts :b",
-        "techs": ["js", "java", "python", "html", "css"],
-        "github": "https://github.com/"
+        "title": "Game Sphere",
+        "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
+        "techs": ["html", "css", "js"],
+        "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4"
     }
 ]
