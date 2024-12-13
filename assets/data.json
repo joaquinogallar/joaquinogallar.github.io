@@ -14,7 +14,13 @@
         "description": "description of the project, some random text so I can see if the text styles correctly and there is no error with that. Also I need to test differents sizes of texts :b",
         "techs": ["js", "java", "python", "html", "css"],
         "github": "https://github.com/"
+    },
+    {
+        "id": 2,
+        "image": "",
+        "title": "something",
+        "description": "description of the project, some random text so I can see if the text styles correctly and there is no error with that. Also I need to test differents sizes of texts :b",
+        "techs": ["js", "java", "python", "html", "css"],
+        "github": "https://github.com/"
     }
-
-    
 ]
