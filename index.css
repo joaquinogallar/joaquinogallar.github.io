@@ -323,9 +323,9 @@ About me
   align-items: center;
 
   padding: 6rem 0;
+  padding-bottom: 10rem;
   margin-top: -3rem;
   border-top: 0.5px rgba(255, 255, 255, 0.1) solid;
-  border-bottom: 0.5px rgba(255, 255, 255, 0.1) solid;
 
   background-color: var(--bg-color-secundary);
 }
@@ -461,7 +461,17 @@ Footer
 <<<<<<<<<<
 */
 #footer {
+  display: flex;
+  justify-content: center;
+
+  height: 50px;
+
   background-color: #000;
+  box-shadow: 0 -10px 70px 50px #000;
+}
+
+#f-text {
+  opacity: 0.8;
 }
 
 /*
@@ -498,7 +508,6 @@ Responsive
     min-width: 0px;
   }
 
-  
   #am-c-linkedIn {
     grid-column: 1 / 3;
     grid-row: 1;
