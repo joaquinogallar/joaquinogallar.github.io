@@ -234,10 +234,10 @@ My experience
 .me-e-c-img {
   min-width: 350px;
   height: 350px;
-
   object-fit: cover;
   border-radius: 10px;
   border: 0.5px rgba(255, 255, 255, 0.2) solid;
+  filter: brightness(0.7);
 }
 
 .project-title {
