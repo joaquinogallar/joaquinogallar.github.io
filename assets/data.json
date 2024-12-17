@@ -14,5 +14,21 @@
         "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
         "techs": ["html", "css", "js"],
         "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4"
+    },
+    {
+        "id": 2,
+        "image": "https://i.imgur.com/4iYyv2Z.jpeg",
+        "title": "Game Sphere",
+        "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
+        "techs": ["html", "css", "js"],
+        "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4"
+    },
+    {
+        "id": 3,
+        "mage": "https://i.imgur.com/4iYyv2Z.jpeg",
+        "title": "Game Sphere",
+        "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
+        "techs": ["html", "css", "js"],
+        "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4"
     }
 ]

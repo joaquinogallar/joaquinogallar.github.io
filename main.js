@@ -1,114 +1,216 @@
-const url = "./assets/data.json";
+const URL_PROJECTS = "./assets/data.json";
 const d = document;
 
-/*
-JSON PROJECT STRUCTURE
-{
-    "id": 0,
-    "image": "",
-    "title": "something",
-    "description": "description of the project, some random text so I can see if the text styles correctly and there is no error with that. Also I need to test differents sizes of texts :b",
-    "techs": ["JS", "JAVA", "PY", "HTML", "CSS"],
-    "github": "https://github.com/"
-} */
-
-const $meExperiencesContainer = d.querySelector(".me-experiences-container");
-
-const getProjects = async () => {
-  let data = await fetch(url);
-  let json = await data.json();
-
-  if (json.length === 0) {
-    let empty = d.createElement("p");
-    empty.id = "no-projects";
-    empty.textContent = "No projects available...";
-    $meExperiencesContainer.appendChild(empty);
-  } else {
-    json.forEach((proj) => {
-      // main container of the project, it contains all the information
-      let projContainer = d.createElement("div");
-      projContainer.setAttribute("id", proj.id);
-      projContainer.classList.add("me-e-container");
-      if (proj.id % 2 !== 0) projContainer.classList.add("odd-project");
-
-      // image of the project
-      let projImg = d.createElement("img");
-      projImg.classList.add("me-e-c-img");
-      projImg.src = proj.image;
-
-      projContainer.appendChild(projImg);
-
-      // project text and description
-      let textContainer = d.createElement("div");
-      textContainer.classList.add("me-e-i-text");
-
-      let projTitle = d.createElement("h3");
-      projTitle.textContent = proj.title;
-      projTitle.classList.add("project-title");
-
-      let projDescription = d.createElement("p");
-      projDescription.classList.add("roboto-mono");
-      projDescription.textContent = proj.description;
-
-      textContainer.appendChild(projTitle);
-      textContainer.appendChild(projDescription);
-
-      // project technologies
-      let techContainer = d.createElement("div");
-      techContainer.classList.add("me-e-i-techs");
-
-      let projTechsTitle = d.createElement("h3");
-      projTechsTitle.classList.add("project-title");
-      projTechsTitle.textContent = "Technologies";
-
-      techContainer.appendChild(projTechsTitle);
-
-      let techsContainer = d.createElement("div");
-      techsContainer.classList.add("me-e-t-images");
-      proj.techs.forEach((t) => {
-        let tImg = d.createElement("img");
-        tImg.src = `./assets/img/techs/${t}.svg`;
-        techsContainer.appendChild(tImg);
-      });
-
-      techContainer.appendChild(techsContainer);
-
-      // buttons github and more
-      let linksContainer = d.createElement("div");
-      linksContainer.classList.add("me-e-i-links");
-
-      let ghImg = d.createElement("img");
-      ghImg.src = "./assets/img/techs/github.svg";
-
-      let ghLink = d.createElement("a");
-      ghLink.id = "gh-link";
-      ghLink.href = proj.github;
-      ghLink.target = "_blank";
-
-      ghLink.appendChild(ghImg);
-      ghLink.append(" GitHub");
-
-      let moreLink = d.createElement("a");
-      moreLink.id = "more-link";
-      moreLink.textContent = "More...";
-      moreLink.href = `./project.html/${proj.id}`;
-
-      linksContainer.appendChild(ghLink);
-      linksContainer.appendChild(moreLink);
-
-      // text, description and technologies container
-      let infoContainer = d.createElement("div");
-      infoContainer.classList.add("me-e-information");
-
-      infoContainer.appendChild(textContainer);
-      infoContainer.appendChild(techContainer);
-      infoContainer.appendChild(linksContainer);
-
-      projContainer.appendChild(infoContainer);
-
-      $meExperiencesContainer.appendChild(projContainer);
-    });
+class ProjectService {
+  static async fetchProjects() {
+    try {
+      const response = await fetch(URL_PROJECTS);
+      if (!response.ok) {
+        throw new Error("Can not load projects");
+      }
+      return await response.json();
+    } catch (error) {
+      console.error("Error fetching projects:", error);
+      return [];
+    }
   }
-};
+}
 
-getProjects();
+// render porjects class
+class ProjectRenderer {
+  constructor(containerSelector) {
+    this.$container = d.querySelector(containerSelector);
+  }
+
+  _createProjectImage(imageUrl) {
+    const projImg = d.createElement("img");
+    projImg.classList.add("me-e-c-img");
+    projImg.src = imageUrl;
+    return projImg;
+  }
+
+  _createTextContainer(title, description) {
+    const textContainer = d.createElement("div");
+    textContainer.classList.add("me-e-i-text");
+
+    const projTitle = d.createElement("h3");
+    projTitle.textContent = title;
+    projTitle.classList.add("project-title");
+
+    const projDescription = d.createElement("p");
+    projDescription.classList.add("roboto-mono");
+    projDescription.textContent = description;
+
+    textContainer.append(projTitle, projDescription);
+    return textContainer;
+  }
+
+  _createTechContainer(techs) {
+    const techContainer = d.createElement("div");
+    techContainer.classList.add("me-e-i-techs");
+
+    const techTitle = d.createElement("h3");
+    techTitle.classList.add("project-title");
+    techTitle.textContent = "Technologies";
+    techContainer.appendChild(techTitle);
+
+    const techsContainer = d.createElement("div");
+    techsContainer.classList.add("me-e-t-images");
+
+    techs.forEach((tech) => {
+      const tImg = d.createElement("img");
+      tImg.src = `./assets/img/techs/${tech}.svg`;
+      techsContainer.appendChild(tImg);
+    });
+
+    techContainer.appendChild(techsContainer);
+    return techContainer;
+  }
+
+  _createLinksContainer(githubLink, projectId) {
+    const linksContainer = d.createElement("div");
+    linksContainer.classList.add("me-e-i-links");
+
+    const ghImg = d.createElement("img");
+    ghImg.src = "./assets/img/techs/github.svg";
+
+    const ghLink = d.createElement("a");
+    ghLink.id = "gh-link";
+    ghLink.href = githubLink;
+    ghLink.target = "_blank";
+    ghLink.append(ghImg, " GitHub");
+
+    const moreLink = d.createElement("a");
+    moreLink.id = "more-link";
+    moreLink.textContent = "More...";
+    moreLink.href = `./project.html/${projectId}`;
+
+    linksContainer.append(ghLink, moreLink);
+    return linksContainer;
+  }
+
+  renderProject(project) {
+    const projContainer = d.createElement("div");
+    projContainer.setAttribute("id", project.id);
+    projContainer.classList.add("me-e-container");
+
+    if (project.id % 2 !== 0) {
+      projContainer.classList.add("odd-project");
+    }
+
+    const projImg = this._createProjectImage(project.image);
+
+    const infoContainer = d.createElement("div");
+    infoContainer.classList.add("me-e-information");
+
+    const textContainer = this._createTextContainer(
+      project.title,
+      project.description
+    );
+    const techContainer = this._createTechContainer(project.techs);
+    const linksContainer = this._createLinksContainer(
+      project.github,
+      project.id
+    );
+
+    infoContainer.append(textContainer, techContainer, linksContainer);
+    projContainer.append(projImg, infoContainer);
+
+    return projContainer;
+  }
+
+  async renderProjects() {
+    const projects = await ProjectService.fetchProjects();
+
+    if (projects.length === 0) {
+      const emptyMessage = d.createElement("p");
+      emptyMessage.id = "no-projects";
+      emptyMessage.textContent = "No projects available...";
+      this.$container.appendChild(emptyMessage);
+    } else {
+      const projectElements = projects.map((project) =>
+        this.renderProject(project)
+      );
+
+      this.$container.append(...projectElements);
+    }
+  }
+}
+
+class ProjectPaginator {
+  constructor(
+    containerSelector,
+    itemsPerInitialLoad = 3,
+    itemsPerSubsequentLoad = 2
+  ) {
+    this.$container = document.querySelector(containerSelector);
+    this.projects = [];
+    this.itemsPerInitialLoad = itemsPerInitialLoad;
+    this.itemsPerSubsequentLoad = itemsPerSubsequentLoad;
+    this.currentLoadedProjects = 0;
+    this.renderer = new ProjectRenderer(containerSelector);
+  }
+
+  async initialize() {
+    this.projects = await ProjectService.fetchProjects();
+
+    this.createShowMoreButton();
+
+    this.loadMoreProjects();
+  }
+
+  createShowMoreButton() {
+    const existingButton = document.getElementById("me-e-btn-more");
+    if (existingButton) {
+      existingButton.remove();
+    }
+
+    this.showMoreButton = document.createElement("button");
+    this.showMoreButton.id = "me-e-btn-more";
+    this.showMoreButton.textContent = "Show More Projects";
+    this.showMoreButton.classList.add("me-e-btn-more");
+    this.showMoreButton.addEventListener("click", () =>
+      this.loadMoreProjects()
+    );
+
+    this.$container.after(this.showMoreButton);
+
+    this.updateShowMoreButtonVisibility();
+  }
+
+  loadMoreProjects() {
+    const projectsToLoad =
+      this.currentLoadedProjects === 0
+        ? this.itemsPerInitialLoad
+        : this.itemsPerSubsequentLoad;
+
+    const nextProjects = this.projects.slice(
+      this.currentLoadedProjects,
+      this.currentLoadedProjects + projectsToLoad
+    );
+
+    nextProjects.forEach((project) => {
+      const projectElement = this.renderer.renderProject(project);
+      this.$container.appendChild(projectElement);
+    });
+
+    this.currentLoadedProjects += nextProjects.length;
+
+    this.updateShowMoreButtonVisibility();
+  }
+
+  updateShowMoreButtonVisibility() {
+    if (!this.showMoreButton) return;
+
+    if (this.currentLoadedProjects >= this.projects.length) {
+      this.showMoreButton.style.display = "none";
+    } else {
+      this.showMoreButton.style.display = "block";
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const projectPaginator = new ProjectPaginator(".me-experiences-container");
+  projectPaginator.initialize();
+});
