@@ -190,6 +190,8 @@ class ProjectPaginator {
     );
 
     nextProjects.forEach((project) => {
+      console.log(project);
+
       const projectElement = this.renderer.renderProject(project);
       this.$container.appendChild(projectElement);
     });
