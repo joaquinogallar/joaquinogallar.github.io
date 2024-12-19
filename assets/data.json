@@ -20,7 +20,21 @@
         "image": "https://i.imgur.com/Uz4VdCy.jpeg",
         "title": "Fragantica",
         "description": "Final project for the Web 2 course, developed independently. The project involved designing and implementing a RESTful application using PHP, with the API consumed on the frontend.",
-        "techs": ["html", "css", "php"],
+        "techs": ["html", "css", "php", "sql"],
         "github": "https://github.com/joaquinogallar/fragantica-rest-main"
+    },
+    {
+        "id": 3,
+        "image": "https://i.imgur.com/UMrU9Vf.jpeg",
+        "title": "Animal Feed",
+        "description": "...",
+        "techs": ["html", "css", "js"]
+    },
+    {
+        "id": 4,
+        "image": "https://i.imgur.com/Z4shpjZ.jpeg",
+        "title": "Bona Vista",
+        "description": "...",
+        "techs": ["html", "css", "js"]
     }
 ]

@@ -165,7 +165,7 @@ Main
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 75vh;
+  height: 75svh;
 }
 
 .m-title-container {
@@ -553,7 +553,7 @@ Responsive
   }
 
   #main-section {
-    height: 85vh;
+    height: 85svh;
   }
 
   .m-title-container h1 {

@@ -1,7 +1,7 @@
 const URL_PROJECTS = "./assets/data.json";
 const d = document;
 
-class ProjectService {
+export default class ProjectService {
   static async fetchProjects() {
     try {
       const response = await fetch(URL_PROJECTS);
@@ -12,6 +12,24 @@ class ProjectService {
     } catch (error) {
       console.error("Error fetching projects:", error);
       return [];
+    }
+  }
+
+  static async findById(id) {
+    try {
+      const data = await this.fetchProjects();
+
+      const project = data.find((proj) => proj.id === id);
+
+      if (!project) {
+        console.log(`Project with id: ${id} does not exists.`);
+        return null;
+      }
+
+      return project;
+    } catch (error) {
+      console.error("Error fetching project by id:", error);
+      return null;
     }
   }
 }
@@ -83,7 +101,7 @@ class ProjectRenderer {
     const moreLink = d.createElement("a");
     moreLink.id = "more-link";
     moreLink.textContent = "More...";
-    moreLink.href = `./project.html/${projectId}`;
+    moreLink.href = `./project.html?id=${projectId}`;
 
     linksContainer.append(ghLink, moreLink);
     return linksContainer;
@@ -109,7 +127,9 @@ class ProjectRenderer {
     );
     const techContainer = this._createTechContainer(project.techs);
     const linksContainer = this._createLinksContainer(
-      project.github,
+      project.github != null
+        ? project.github
+        : "https://github.com/joaquinogallar",
       project.id
     );
 
@@ -134,6 +154,13 @@ class ProjectRenderer {
 
       this.$container.append(...projectElements);
     }
+  }
+}
+
+class ProjectRenderById {
+  constructor(containerSelector, id) {
+    this.$container = d.querySelector(containerSelector);
+    this.id = id;
   }
 }
 
@@ -212,7 +239,7 @@ class ProjectPaginator {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const projectPaginator = new ProjectPaginator(".me-experiences-container");
   projectPaginator.initialize();
 });
