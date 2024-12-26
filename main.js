@@ -40,11 +40,28 @@ class ProjectRenderer {
     this.$container = d.querySelector(containerSelector);
   }
 
-  _createProjectImage(imageUrl) {
+  _createProjectImage(imageUrl, status) {
+    const projContainer = d.createElement("div")
+    projContainer.classList.add("me-e-c-container")
     const projImg = d.createElement("img");
     projImg.classList.add("me-e-c-img");
     projImg.src = imageUrl;
-    return projImg;
+    
+    projContainer.appendChild(this._createStatusContainer(status))
+    projContainer.appendChild(projImg)
+    return projContainer;
+  }
+
+  _createStatusContainer(status) {
+    const statusContainer = d.createElement("div")
+    statusContainer.classList.add("me-e-status")
+
+    const statusText = d.createElement("p")
+    status === true ? statusText.textContent = "Finished" : statusText.textContent = "In Progress"
+    status === true ? statusContainer.classList.add("finished") : statusContainer.classList.add("in-progress")
+    
+    statusContainer.appendChild(statusText)
+    return statusContainer
   }
 
   _createTextContainer(title, description) {
@@ -116,7 +133,7 @@ class ProjectRenderer {
       projContainer.classList.add("odd-project");
     }
 
-    const projImg = this._createProjectImage(project.image);
+    const projImg = this._createProjectImage(project.image, project.finished);
 
     const infoContainer = d.createElement("div");
     infoContainer.classList.add("me-e-information");

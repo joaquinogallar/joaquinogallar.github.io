@@ -32,8 +32,10 @@ img {
 :root {
   --primary-color: #313c4d;
   --secundary-color: #0e1319;
+  --third-color: #7989A3;
   --background-color: #0d1117;
   --bg-color-secundary: #141a21;
+
 
   --text-color: #fafafa;
 }
@@ -231,13 +233,34 @@ My experience
   margin-right: 2rem;
 }
 
+.finished, .in-progress {
+  background-color: #7989A3;
+  border-radius: 10px 2px 8px 0;
+  padding: .2rem 1.2rem;
+}
+
+.in-progress {
+  background-color: var(--primary-color);
+}
+
+.me-e-c-container {
+  width: 350px;
+  height: 350px;
+  position: relative;
+}
+
 .me-e-c-img {
   min-width: 350px;
-  height: 350px;
+  min-height: 350px;
   object-fit: cover;
   border-radius: 10px;
   border: 0.5px rgba(255, 255, 255, 0.2) solid;
   filter: brightness(0.7);
+}
+
+.me-e-status {
+  position: absolute;
+  left: 0;
 }
 
 .project-title {
@@ -514,8 +537,12 @@ Responsive
     font-size: 18px;
   }
 
+  .me-e-c-container {
+    width: 100%;
+  }
+
   .me-e-c-img {
-    min-width: 0px;
+    min-width: 100%;
   }
 
   #am-c-linkedIn {

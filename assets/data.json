@@ -5,7 +5,8 @@
         "title": "Final Project",
         "description": "Final project of Web Architectures subject, developed as a team, with planning and design of a microservices architecture solution in Java and Spring Boot, integrated with PostgreSQL and MongoDB.",
         "techs": ["java", "spring", "docker", "sql"],
-        "github": "https://github.com/joaquinogallar/integradoresArqWeb/tree/main/trabajo-especial"
+        "github": "https://github.com/joaquinogallar/integradoresArqWeb/tree/main/trabajo-especial",
+        "finished": false
     },
     {
         "id": 1,
@@ -13,7 +14,8 @@
         "title": "Game Sphere",
         "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
         "techs": ["html", "css", "js"],
-        "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4"
+        "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4",
+        "finished": true
     },
     {
         "id": 2,
@@ -21,20 +23,23 @@
         "title": "Fragantica",
         "description": "Final project for the Web 2 course, developed independently. The project involved designing and implementing a RESTful application using PHP, with the API consumed on the frontend.",
         "techs": ["html", "css", "php", "sql"],
-        "github": "https://github.com/joaquinogallar/fragantica-rest-main"
+        "github": "https://github.com/joaquinogallar/fragantica-rest-main",
+        "finished": true
     },
     {
         "id": 3,
         "image": "https://i.imgur.com/UMrU9Vf.jpeg",
         "title": "Animal Feed",
         "description": "...",
-        "techs": ["html", "css", "js"]
+        "techs": ["html", "css", "js"],
+        "finished": true
     },
     {
         "id": 4,
         "image": "https://i.imgur.com/Z4shpjZ.jpeg",
         "title": "Bona Vista",
         "description": "...",
-        "techs": ["html", "css", "js"]
+        "techs": ["html", "css", "js"],
+        "finished": true
     }
 ]
