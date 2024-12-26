@@ -234,6 +234,7 @@ My experience
 }
 
 .finished, .in-progress {
+  z-index: 100;
   background-color: #7989A3;
   border-radius: 10px 2px 8px 0;
   padding: .2rem 1.2rem;
