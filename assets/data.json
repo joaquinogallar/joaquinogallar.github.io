@@ -30,7 +30,7 @@
         "id": 3,
         "image": "https://i.imgur.com/UMrU9Vf.jpeg",
         "title": "Animal Feed",
-        "description": "...",
+        "description": "Developed the frontend of a landing page for a company specializing in food for small and large animals. The design focused on creating an attractive and functional layout to highlight the company's products and deliver an impactful user experience.",
         "techs": ["html", "css", "js"],
         "finished": true
     },
@@ -38,7 +38,7 @@
         "id": 4,
         "image": "https://i.imgur.com/Z4shpjZ.jpeg",
         "title": "Bona Vista",
-        "description": "...",
+        "description": "Designed and developed the frontend of a website for a nursing home. The page includes an interactive form that allows users to send emails directly through the site, ensuring a user-friendly and accessible experience.",
         "techs": ["html", "css", "js"],
         "finished": true
     }
