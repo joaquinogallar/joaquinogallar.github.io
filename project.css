@@ -1,3 +1,17 @@
+#back {
+  font-size: 2rem;
+  opacity: .5;
+  font-weight: 800;
+}
+
 #project-content {
   min-height: 100svh;
+  max-width: 800px;
+  margin: 4rem auto;
 }
+
+.p-title-container #p-title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
