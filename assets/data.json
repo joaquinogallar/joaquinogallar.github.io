@@ -6,7 +6,46 @@
         "description": "Final project of Web Architectures subject, developed as a team, with planning and design of a microservices architecture solution in Java and Spring Boot, integrated with PostgreSQL and MongoDB.",
         "techs": ["java", "spring", "docker", "sql"],
         "github": "https://github.com/joaquinogallar/integradoresArqWeb/tree/main/trabajo-especial",
-        "finished": false
+        "finished": false,
+        "details": {
+            "intro": "In this project, we needed to create a program that allows people to rent electric skateboards. Basically, the user selects one of the predefined stops in the city (this will be the pickup point for the skateboard). The user also decides when to end the ride. When this happens, he/she needs to select another predefined stop in the city to leave the skateboard, and then the total cost is charged to the user's account.",
+            "steps": [
+                {
+                    "stepTitle": "Planning & Requirements Analysis",
+                    "stepDesc": "We defined the main system features, including user management, skateboard management, and trips."
+                },
+                {
+                    "stepTitle": "Designing the System Architecture",
+                    "stepDesc": "We designed a basic microservices architecture that included a user service, a trip service, and a skateboard management service."
+                },
+                {
+                    "stepTitle": "Database Design",
+                    "stepDesc": "We used PostgreSQL and MongoDB to store data related to users, accounts, and trips. The necessary tables and their relationships were defined."
+                },
+                {
+                    "stepTitle": "Developing RESTful APIs",
+                    "stepDesc": "We created REST APIs using Spring Boot for each microservice, enabling interaction between users and the system."
+                },
+                {
+                    "stepTitle": "Simulating GPS with Coordinates",
+                    "stepDesc": "We implemented a GPS simulation using coordinates (x, y) for the stops and skateboards. A simple if condition was used to check if the skateboard was at a stop to allow trip completion."
+                },
+                {
+                    "stepTitle": "Implementing Core Features",
+                    "stepDesc": "We developed key features such as account creation, trip start and end, and cost calculation."
+                },
+                {
+                    "stepTitle": "Dockerizing the Services",
+                    "stepDesc": "We used Docker to containerize the microservices, making deployment and execution easier across different environments."
+                },
+                {
+                    "stepTitle": "Testing & Debugging",
+                    "stepDesc": "We performed basic manual tests to verify the correct operation of the APIs and system logic."
+                }
+                
+            ],
+            "images": []
+        }
     },
     {
         "id": 1,
