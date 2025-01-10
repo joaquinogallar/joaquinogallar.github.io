@@ -10,8 +10,27 @@
   margin: 4rem auto;
 }
 
+#p-description {
+  opacity: .6;
+}
+
 .p-title-container #p-title {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 40px;
 }
 
+.p-steps-container {
+  margin-top: 3rem;
+}
+
+.p-steps-container ul li {
+  margin-top: 1rem;
+}
+
+.p-s-list-title {
+  font-weight: 400;
+}
+
+.p-s-list-text {
+  opacity: .4;
+}
