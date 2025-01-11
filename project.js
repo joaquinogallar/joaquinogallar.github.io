@@ -16,7 +16,7 @@ const pDescription = document.getElementById("p-description");
 
   title.textContent += ` - ${proj.title}`;
   pTitle.textContent = proj.title;
-  pDescription.textContent = proj.description;
+  pDescription.textContent += proj.details.intro
 
   const stepsList = document.getElementById("p-steps-list");
   proj.details.steps.forEach((step) => {

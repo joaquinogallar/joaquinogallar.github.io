@@ -54,7 +54,17 @@
         "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
         "techs": ["html", "css", "js"],
         "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4",
-        "finished": true
+        "finished": true,
+        "details": {
+            "intro": "",
+            "steps": [
+                {
+                    "stepTitle": "",
+                    "stepDesc": ""
+                }
+            ],
+            "images": []
+        }
     },
     {
         "id": 2,
@@ -63,7 +73,17 @@
         "description": "Final project for the Web 2 course, developed independently. The project involved designing and implementing a RESTful application using PHP, with the API consumed on the frontend.",
         "techs": ["html", "css", "php", "sql"],
         "github": "https://github.com/joaquinogallar/fragantica-rest-main",
-        "finished": true
+        "finished": true,
+        "details": {
+            "intro": "",
+            "steps": [
+                {
+                    "stepTitle": "",
+                    "stepDesc": ""
+                }
+            ],
+            "images": []
+        }
     },
     {
         "id": 3,
@@ -71,7 +91,17 @@
         "title": "Animal Feed",
         "description": "Developed the frontend of a landing page for a company specializing in food for small and large animals. The design focused on creating an attractive and functional layout to highlight the company's products and deliver an impactful user experience.",
         "techs": ["html", "css", "js"],
-        "finished": true
+        "finished": true,
+        "details": {
+            "intro": "",
+            "steps": [
+                {
+                    "stepTitle": "",
+                    "stepDesc": ""
+                }
+            ],
+            "images": []
+        }
     },
     {
         "id": 4,
@@ -79,6 +109,16 @@
         "title": "Bona Vista",
         "description": "Designed and developed the frontend of a website for a nursing home. The page includes an interactive form that allows users to send emails directly through the site, ensuring a user-friendly and accessible experience.",
         "techs": ["html", "css", "js"],
-        "finished": true
+        "finished": true,
+        "details": {
+            "intro": "",
+            "steps": [
+                {
+                    "stepTitle": "",
+                    "stepDesc": ""
+                }
+            ],
+            "images": []
+        }
     }
 ]

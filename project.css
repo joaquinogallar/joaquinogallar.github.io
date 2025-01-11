@@ -20,7 +20,7 @@
 }
 
 .p-steps-container {
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
 .p-steps-container ul li {
@@ -28,7 +28,7 @@
 }
 
 .p-s-list-title {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .p-s-list-text {
