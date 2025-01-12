@@ -56,11 +56,39 @@
         "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4",
         "finished": true,
         "details": {
-            "intro": "",
+            "intro": "In this project, we aimed to create a web platform for playing online minigames. The main idea was to design an intuitive and visually appealing page that followed UX and UI principles to ensure a smooth user experience. The platform allows users to explore different minigames through a clean, structured layout. Additionally, we developed an interactive 4 in a Line game, where two players can compete by placing pieces on a grid, with the objective of connecting four in a row to win. Every design decision was guided by user-centered thinking, from creating prototypes in Figma to ensuring responsiveness and interactivity with HTML, CSS, and JavaScript.",
             "steps": [
                 {
-                    "stepTitle": "",
-                    "stepDesc": ""
+                    "stepTitle": "Understanding User Needs & Defining Requirements",
+                    "stepDesc": "We started by identifying the target audience and defining key requirements for the minigames page. The goal was to create a platform that offered simplicity, fun, and ease of use."
+                },
+                {
+                    "stepTitle": "Design Prototyping with Figma",
+                    "stepDesc": "Using Figma, we created interactive prototypes and detailed designs for the minigames page. This helped us visualize the final product and define a consistent style guide (colors, typography, and spacing) before starting the implementation."
+                },
+                {
+                    "stepTitle": "Developing the Core Structure (HTML)",
+                    "stepDesc": "We translated the Figma prototypes into semantic HTML, ensuring the structure of the page was accessible and well-organized."
+                },
+                {
+                    "stepTitle": "Styling the Website (CSS)",
+                    "stepDesc": "With the designs from Figma as a guide, we used CSS to style the website, focusing on creating an engaging and responsive user experience."
+                },
+                {
+                    "stepTitle": "Adding Functionality (JavaScript)",
+                    "stepDesc": "We implemented interactive features with JavaScript, such as Navigation between different sections of the minigames page, Dynamic content loading for game categories and games and Basic animations to improve user engagement."
+                },
+                {
+                    "stepTitle": "Developing the Minigame: 4 in a Line",
+                    "stepDesc": "We programmed the 4 in a Line game, focusing on providing a fun and intuitive gameplay experience."
+                },
+                {
+                    "stepTitle": "User Testing & Feedback",
+                    "stepDesc": "After completing the first version, we conducted user testing to gather feedback on the usability and design. This helped us refine both the UI and the gameplay."
+                },
+                {
+                    "stepTitle": "Finalizing & Presenting the Project",
+                    "stepDesc": "Once all adjustments were made, we finalized the project and prepared it for presentation, ensuring it met all the project requirements."
                 }
             ],
             "images": []
