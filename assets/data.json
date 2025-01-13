@@ -103,11 +103,35 @@
         "github": "https://github.com/joaquinogallar/fragantica-rest-main",
         "finished": true,
         "details": {
-            "intro": "",
+            "intro": "In this project, I developed a catalog of perfumes with authentication and an administration panel. The goal was to build a complete web application with a PHP backend, a template engine for the front end, and Bootstrap for styling. The system allows regular users to view the catalog and an admin user to manage perfumes (add, update, or delete). To achieve this, I implemented a custom router in PHP to handle different routes dynamically and created a simple authentication system to manage user access. The project also included database design and interaction using MariaDB for data storage.",
             "steps": [
                 {
-                    "stepTitle": "",
-                    "stepDesc": ""
+                    "stepTitle": "Planning & Requirements Analysis",
+                    "stepDesc": "Defined the main features of the catalog, including user roles (regular user and admin), perfume management, and authentication."
+                },
+                {
+                    "stepTitle": "Database Design",
+                    "stepDesc": "Designed the database schema using MariaDB. It included tables for perfumes and users, with appropriate relationships and fields to support CRUD operations."
+                },
+                {
+                    "stepTitle": "Setting up the Backend",
+                    "stepDesc": "Developed a custom PHP router to manage dynamic routing for the different pages (home, perfume details, admin panel). Added route guards to ensure only admins could access the management panel."
+                },
+                {
+                    "stepTitle": "Implementing User Authentication",
+                    "stepDesc": "Created a simple authentication system where users can log in, and admins have additional privileges to manage the perfume catalog."
+                },
+                {
+                    "stepTitle": "Building the Frontend",
+                    "stepDesc": "Used a PHP template engine combined with HTML, CSS, and Bootstrap to create a responsive and user-friendly UI for the catalog and admin panel."
+                },
+                {
+                    "stepTitle": "Admin Panel Development",
+                    "stepDesc": "Implemented functionalities for the admin user to add new perfumes, update existing ones, and delete them from the database."
+                },
+                {
+                    "stepTitle": "Testing & Debugging",
+                    "stepDesc": "Performed manual testing to verify that all routes worked correctly, user roles were respected, and database operations (CRUD) were functioning as expected."
                 }
             ],
             "images": []
