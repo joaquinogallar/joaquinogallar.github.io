@@ -136,19 +136,21 @@ Main
 }
 
 #oval0 {
+  background-color: var(--third-color);
+
   left: 0;
   top: -60px;
 
   filter: blur(80px);
 
-  height: 100px;
+  height: 70px;
   width: 100%;
 }
 
 #oval1 {
   transform: rotate(130deg);
 
-  left: 12%;
+  left: 10%;
   top: 20rem;
 
   height: 100px;
@@ -158,11 +160,24 @@ Main
 #oval2 {
   transform: rotate(45deg);
 
-  right: 6%;
+  right: 0;
   top: 40rem;
 
   height: 100px;
   width: 1000px;
+}
+
+#oval3 {
+  background-color: var(--third-color);
+
+  transform: rotate(-10deg);
+
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 0rem;
+
+  height: 100px;
+  width: calc(100% + 100rem);
 }
 
 #main-section {
@@ -199,8 +214,10 @@ My experience
 <<<<<<<<<<
 */
 #my-experience-section {
+  position: relative;
   display: flex;
   justify-content: center;
+
   width: 100%;
 }
 
@@ -344,6 +361,50 @@ My experience
   font-size: 16px;
   padding: 0.6rem 1rem;
   border-radius: 10px;
+}
+
+.bottom-particles {
+  z-index: -1;
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+
+  width: .5rem;
+  height: .5rem;
+
+  background-color: var(--third-color);
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0;
+
+  animation-name: blow;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blow {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: .5;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.1);
+    opacity: 0;
+  }
 }
 
 /*
@@ -606,6 +667,7 @@ Responsive
   #about-me-section {
     padding: 6rem 1.5rem;
   }
+
   .am-container {
     min-width: 0;
     max-width: none;
