@@ -1,5 +1,5 @@
 const container = document.getElementById('particle-container');
-const bubbleCount = 50;
+const bubbleCount = 30;
 const minSpeed = 10000;   // in ms
 const maxSpeed = 20000;
 const maxDelay = 10000;

@@ -172,10 +172,11 @@ Main
 
   transform: rotate(-10deg);
 
+  opacity: .3;
+
   right: 50%;
   transform: translateX(50%);
   bottom: 0rem;
-
   height: 100px;
   width: calc(100% + 100rem);
 }
