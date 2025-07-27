@@ -47,8 +47,10 @@ img {
 }
 
 .subtitle {
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: 500;
+  font-size: 40px;
+  
+  width: fit-content;
 }
 
 body {
@@ -288,7 +290,7 @@ My experience
 }
 
 .project-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
 }
 
