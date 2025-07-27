@@ -260,3 +260,34 @@ document.addEventListener("DOMContentLoaded", async () => {
   const projectPaginator = new ProjectPaginator(".me-experiences-container");
   projectPaginator.initialize();
 });
+
+
+//test
+// 
+// 
+// me-experience
+// me-projects
+
+let meProfessionalExperience = d.getElementById("me-professional-experience");
+let meProjectsExperience = d.getElementById("me-projects-experience");
+
+let meExperience = d.querySelector(".me-experience");
+let meProjects = d.querySelector(".me-projects");
+
+meProfessionalExperience.addEventListener("click", () => {
+  if (meProjects.classList.contains("me-active")) {
+    meProfessionalExperience.classList.add("me-n-active");
+    meProjectsExperience.classList.remove("me-n-active");
+    meProjects.classList.remove("me-active");
+    meExperience.classList.add("me-active");
+  }
+});
+
+meProjectsExperience.addEventListener("click", () => {
+  if (meExperience.classList.contains("me-active")) {
+    meProjectsExperience.classList.add("me-n-active");
+    meProfessionalExperience.classList.remove("me-n-active");
+    meExperience.classList.remove("me-active");
+    meProjects.classList.add("me-active");
+  }
+})

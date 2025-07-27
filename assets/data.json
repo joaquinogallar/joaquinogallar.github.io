@@ -2,7 +2,7 @@
     {
         "id": 0,
         "image": "https://i.imgur.com/pCBKQ5L.png",
-        "title": "Final Project",
+        "title": "Microservices System for Web Architectures",
         "description": "Final project of Web Architectures subject, developed as a team, with planning and design of a microservices architecture solution in Java and Spring Boot, integrated with PostgreSQL and MongoDB.",
         "techs": ["java", "spring", "docker", "sql"],
         "github": "https://github.com/joaquinogallar/integradoresArqWeb/tree/main/trabajo-especial",
