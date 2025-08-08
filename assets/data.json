@@ -1,6 +1,57 @@
 [
     {
         "id": 0,
+        "image": "https://i.imgur.com/co5Fqj3.png",
+        "title": "Prok",
+        "description": "Full-featured To-Do list web application with authentication and task management, built using Spring Boot and Thymeleaf.",
+        "techs": ["java", "spring", "docker", "sql", "html", "css"],
+        "github": "https://github.com/joaquinogallar/Prok",
+        "finished": false,
+        "details": {
+            "intro": "Prok is a personal task management application designed to help users organize their daily activities. The platform allows users to register, log in, and manage their tasks through an intuitive web interface built with Thymeleaf. Each user has their own private task list, with features for creating, editing, completing, and deleting tasks. The backend is powered by Spring Boot and follows the MVC pattern, ensuring clean separation between business logic, data handling, and presentation.",
+            "steps": [
+                {
+                    "stepTitle": "Planning & Requirements Analysis",
+                    "stepDesc": "Defined the main features: secure user authentication, private task lists, and task CRUD operations."
+                },
+                {
+                    "stepTitle": "Designing the System Architecture",
+                    "stepDesc": "Applied the MVC pattern with Spring Boot, separating controllers, services, and repositories for maintainability."
+                },
+                {
+                    "stepTitle": "Database Design",
+                    "stepDesc": "Designed a relational schema in PostgreSQL with separate tables for users and tasks, linked through foreign keys."
+                },
+                {
+                    "stepTitle": "Implementing Authentication",
+                    "stepDesc": "Integrated Spring Security with session-based authentication to protect user data and restrict access to private task lists."
+                },
+                {
+                    "stepTitle": "Building the Frontend with Thymeleaf",
+                    "stepDesc": "Developed responsive HTML templates with Thymeleaf for dynamic rendering of tasks, forms, and user data."
+                },
+                {
+                    "stepTitle": "Task Management Features",
+                    "stepDesc": "Implemented create, read, update, and delete operations for tasks, as well as the ability to mark tasks as completed."
+                },
+                {
+                    "stepTitle": "Styling the Interface",
+                    "stepDesc": "Applied CSS for a clean, user-friendly interface, ensuring mobile responsiveness."
+                },
+                {
+                    "stepTitle": "Containerization",
+                    "stepDesc": "Used Docker to containerize the application and database for easier deployment and testing."
+                },
+                {
+                    "stepTitle": "Testing & Debugging",
+                    "stepDesc": "Performed manual and unit testing to ensure correctness of authentication, task operations, and UI rendering."
+                }
+            ],
+            "images": []
+        }
+    },
+    {
+        "id": 1,
         "image": "https://i.imgur.com/pCBKQ5L.png",
         "title": "Microservices System for Web Architectures",
         "description": "Final project of Web Architectures subject, developed as a team, with planning and design of a microservices architecture solution in Java and Spring Boot, integrated with PostgreSQL and MongoDB.",
@@ -48,7 +99,7 @@
         }
     },
     {
-        "id": 1,
+        "id": 2,
         "image": "https://i.imgur.com/Elbs9Al.jpeg",
         "title": "Game Sphere",
         "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
@@ -95,7 +146,7 @@
         }
     },
     {
-        "id": 2,
+        "id": 3,
         "image": "https://i.imgur.com/Uz4VdCy.jpeg",
         "title": "Fragantica",
         "description": "Final project for the Web 2 course, developed independently. The project involved designing and implementing a RESTful application using PHP, with the API consumed on the frontend.",
