@@ -44,7 +44,7 @@
                 },
                 {
                     "stepTitle": "Testing & Debugging",
-                    "stepDesc": "Performed manual and unit testing to ensure correctness of authentication, task operations, and UI rendering."
+                    "stepDesc": "Performed manual testing to ensure correctness of authentication, task operations, and UI rendering."
                 }
             ],
             "images": []
