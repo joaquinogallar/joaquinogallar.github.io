@@ -472,13 +472,10 @@ My experience
   position: absolute;
   bottom: 0;
 
-  width: .5rem;
-  height: .5rem;
+  width: .3rem;
+  height: .3rem;
 
-  background-color: var(--third-color);
-  border-radius: 50%;
-  filter: blur(2px);
-  opacity: 0;
+  background-color: var(--text-color);
 
   animation-name: blow;
   animation-timing-function: ease-out;

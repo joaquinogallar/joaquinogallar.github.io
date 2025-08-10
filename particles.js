@@ -2,7 +2,7 @@ const container = document.getElementById('particle-container');
 const bubbleCount = 30;
 const minSpeed = 15000;   // in ms
 const maxSpeed = 25000;
-const maxDelay = 10000;
+const maxDelay = 14000;
 
 for (let i = 0; i < bubbleCount; i++) {
     const bubble = document.createElement('div');
