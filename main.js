@@ -41,27 +41,31 @@ class ProjectRenderer {
   }
 
   _createProjectImage(imageUrl, status) {
-    const projContainer = d.createElement("div")
-    projContainer.classList.add("me-e-c-container")
+    const projContainer = d.createElement("div");
+    projContainer.classList.add("me-e-c-container");
     const projImg = d.createElement("img");
     projImg.classList.add("me-e-c-img");
     projImg.src = imageUrl;
-    
-    projContainer.appendChild(this._createStatusContainer(status))
-    projContainer.appendChild(projImg)
+
+    projContainer.appendChild(this._createStatusContainer(status));
+    projContainer.appendChild(projImg);
     return projContainer;
   }
 
   _createStatusContainer(status) {
-    const statusContainer = d.createElement("div")
-    statusContainer.classList.add("me-e-status")
+    const statusContainer = d.createElement("div");
+    statusContainer.classList.add("me-e-status");
 
-    const statusText = d.createElement("p")
-    status === true ? statusText.textContent = "Finished" : statusText.textContent = "In Progress"
-    status === true ? statusContainer.classList.add("finished") : statusContainer.classList.add("in-progress")
-    
-    statusContainer.appendChild(statusText)
-    return statusContainer
+    const statusText = d.createElement("p");
+    status === true
+      ? (statusText.textContent = "Finished")
+      : (statusText.textContent = "In Progress");
+    status === true
+      ? statusContainer.classList.add("finished")
+      : statusContainer.classList.add("in-progress");
+
+    statusContainer.appendChild(statusText);
+    return statusContainer;
   }
 
   _createTextContainer(title, description) {
@@ -93,9 +97,19 @@ class ProjectRenderer {
     techsContainer.classList.add("me-e-t-images");
 
     techs.forEach((tech) => {
+      const imgContainer = d.createElement("div");
+      imgContainer.classList.add(`${tech}-container`);
+      imgContainer.classList.add(`tech-img-container`);
+
       const tImg = d.createElement("img");
       tImg.src = `./assets/img/techs/${tech}.svg`;
-      techsContainer.appendChild(tImg);
+
+      const techName = d.createElement("p");
+      techName.textContent = tech;
+
+      imgContainer.appendChild(tImg);
+      imgContainer.appendChild(techName);
+      techsContainer.appendChild(imgContainer);
     });
 
     techContainer.appendChild(techsContainer);
@@ -234,7 +248,6 @@ class ProjectPaginator {
     );
 
     nextProjects.forEach((project) => {
-
       const projectElement = this.renderer.renderProject(project);
       this.$container.appendChild(projectElement);
     });
@@ -259,11 +272,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const projectPaginator = new ProjectPaginator(".me-experiences-container");
   projectPaginator.initialize();
 
-
-
   //test
-  // 
-  // 
+  //
+  //
   // me-experience
   // me-projects
 
@@ -273,7 +284,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let meExperience = d.querySelector(".me-experience");
   let meProjects = d.querySelector(".me-projects");
 
-  if(meProfessionalExperience != null){
+  if (meProfessionalExperience != null) {
     meProfessionalExperience.addEventListener("click", () => {
       if (meProjects.classList.contains("me-active")) {
         meProfessionalExperience.classList.add("me-n-active");
@@ -290,6 +301,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         meExperience.classList.remove("me-active");
         meProjects.classList.add("me-active");
       }
-    })
+    });
   }
 });
