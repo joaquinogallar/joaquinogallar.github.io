@@ -51,7 +51,7 @@
         }
     },
     {
-        "id": 1,
+        "id": 10,
         "image": "https://i.imgur.com/pCBKQ5L.png",
         "title": "Microservices System for Web Architectures",
         "description": "Final project of Web Architectures subject, developed as a team, with planning and design of a microservices architecture solution in Java and Spring Boot, integrated with PostgreSQL and MongoDB.",
@@ -99,7 +99,7 @@
         }
     },
     {
-        "id": 2,
+        "id": 20,
         "image": "https://i.imgur.com/Elbs9Al.jpeg",
         "title": "Game Sphere",
         "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
@@ -146,7 +146,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 30,
         "image": "https://i.imgur.com/Uz4VdCy.jpeg",
         "title": "Fragantica",
         "description": "Final project for the Web 2 course, developed independently. The project involved designing and implementing a RESTful application using PHP, with the API consumed on the frontend.",
