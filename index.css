@@ -502,6 +502,68 @@ My experience
 
 /*
 >>>>>>>>>>
+My professional experience
+<<<<<<<<<<
+*/
+#my-professional-experience-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  background-color: #020202;
+  padding: 2rem 0 6rem 0;
+}
+
+.mpe-container {
+  width: 65%;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mpe-container h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.mpe-list {
+  position: relative;
+  padding: 0 8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem; 
+}
+
+.mpe-list::before {
+  content: "";
+  height: 100%;
+  background-color: var(--third-color);
+  width: 3px;
+  top: 0;
+  position: absolute;
+  left: 4rem;
+  opacity: 50%;
+}
+
+.mpe-l-l-dot {
+  border-radius: 100%;
+
+  padding: .5rem;
+  position: absolute;
+  left: 2.55rem;
+  border: 1rem solid #020202;
+  background-color: var(--primary-color);
+}
+
+.mpe-l-l-d-date {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+/*
+>>>>>>>>>>
 About me
 <<<<<<<<<<
 */
