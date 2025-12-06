@@ -225,7 +225,9 @@ My experience
 #my-experience-section {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   width: 100%;
 }
@@ -234,7 +236,7 @@ My experience
   display: flex;
   justify-content: space-between;
 
-  gap: 20px;
+  border: 1px solid var(--primary-color);
   margin-bottom: 2rem;
 }
 
@@ -247,13 +249,14 @@ My experience
 }
 
 .me-navigation-btn:hover {
-  outline: 1px var(--primary-color) solid;
-  border-radius: 999px;
+  background-color: var(--primary-color);
   opacity: 1;
 }
 
 .me-n-active {
   opacity: 1;
+    background-color: var(--primary-color);
+
 }
 
 .me-section {
@@ -272,6 +275,11 @@ My experience
 .me-experience h2 {
   margin-bottom: 1rem;
 }
+
+/*
+
+OLD_STYLES 
+
 .me-experience-entry {
   display: flex;
   flex-direction: column;
@@ -309,6 +317,7 @@ My experience
   color: #72767a;
   line-height: 1.6;
 }
+*/
 
 .me-container {
   z-index: 1;
