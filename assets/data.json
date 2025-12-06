@@ -51,7 +51,7 @@
         }
     },
     {
-        "id": 10,
+        "id": 11,
         "image": "https://i.imgur.com/pCBKQ5L.png",
         "title": "Microservices System for Web Architectures",
         "description": "Final project of Web Architectures subject, developed as a team, with planning and design of a microservices architecture solution in Java and Spring Boot, integrated with PostgreSQL and MongoDB.",
@@ -146,7 +146,7 @@
         }
     },
     {
-        "id": 30,
+        "id": 31,
         "image": "https://i.imgur.com/Uz4VdCy.jpeg",
         "title": "Fragantica",
         "description": "Final project for the Web 2 course, developed independently. The project involved designing and implementing a RESTful application using PHP, with the API consumed on the frontend.",
