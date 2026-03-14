@@ -1,6 +1,19 @@
 [
     {
         "id": 0,
+        "image": "",
+        "title": "Personal Blog",
+        "description": "Personal blog backend developed with Spring Boot, featuring user authentication, post management, and a RESTful API for frontend consumption.",
+        "techs": ["java", "spring", "docker", "sql"],
+        "github": "https://github.com/joaquinogallar/personal-blog-backend",
+        "finished": false,
+        "details": {
+            "intro": "Spring Boot backend following best practices with a modular layered architecture, DTOs for clean API contracts, pagination support for large datasets, secure authentication and authorization, well-separated modules and services, comprehensive unit and integration tests, and full Swagger/OpenAPI documentation for the REST API. The backend is designed to be consumed by a frontend application, providing endpoints for user registration, login, post creation, editing, deletion, and retrieval with pagination.",
+            "images": []
+        }
+    },
+    {
+        "id": 5,
         "image": "https://i.imgur.com/co5Fqj3.png",
         "title": "Prok",
         "description": "Full-featured To-Do list web application with authentication and task management, built using Spring Boot and Thymeleaf.",
