@@ -4,7 +4,12 @@
         "image": "",
         "title": "Personal Blog",
         "description": "Personal blog backend developed with Spring Boot, featuring user authentication, post management, and a RESTful API for frontend consumption.",
-        "techs": ["java", "spring", "docker", "sql"],
+        "techs": [
+            "java",
+            "spring",
+            "docker",
+            "sql"
+        ],
         "github": "https://github.com/joaquinogallar/personal-blog-backend",
         "finished": false,
         "details": {
