@@ -4,7 +4,14 @@
         "image": "https://i.imgur.com/co5Fqj3.png",
         "title": "Prok",
         "description": "Full-featured To-Do list web application with authentication and task management, built using Spring Boot and Thymeleaf.",
-        "techs": ["java", "spring", "docker", "sql", "html", "css"],
+        "techs": [
+            "java",
+            "spring",
+            "docker",
+            "sql",
+            "html",
+            "css"
+        ],
         "github": "https://github.com/joaquinogallar/Prok",
         "finished": false,
         "details": {
@@ -51,11 +58,16 @@
         }
     },
     {
-        "id": 11,
+        "id": 10,
         "image": "https://i.imgur.com/pCBKQ5L.png",
         "title": "Microservices System for Web Architectures",
         "description": "Final project of Web Architectures subject, developed as a team, with planning and design of a microservices architecture solution in Java and Spring Boot, integrated with PostgreSQL and MongoDB.",
-        "techs": ["java", "spring", "docker", "sql"],
+        "techs": [
+            "java",
+            "spring",
+            "docker",
+            "sql"
+        ],
         "github": "https://github.com/joaquinogallar/integradoresArqWeb/tree/main/trabajo-especial",
         "finished": false,
         "details": {
@@ -93,17 +105,20 @@
                     "stepTitle": "Testing & Debugging",
                     "stepDesc": "We performed basic manual tests to verify the correct operation of the APIs and system logic."
                 }
-                
             ],
             "images": []
         }
     },
     {
-        "id": 20,
+        "id": 21,
         "image": "https://i.imgur.com/Elbs9Al.jpeg",
         "title": "Game Sphere",
         "description": "Final project for the User Interfaces subject, developed as a team. The project involved the design and implementation of a minigames page, where we applied UI/UX design principles.",
-        "techs": ["html", "css", "js"],
+        "techs": [
+            "html",
+            "css",
+            "js"
+        ],
         "github": "https://github.com/joaquinogallar/interfaces-grupo8/tree/main/TP4",
         "finished": true,
         "details": {
@@ -150,7 +165,12 @@
         "image": "https://i.imgur.com/Uz4VdCy.jpeg",
         "title": "Fragantica",
         "description": "Final project for the Web 2 course, developed independently. The project involved designing and implementing a RESTful application using PHP, with the API consumed on the frontend.",
-        "techs": ["html", "css", "php", "sql"],
+        "techs": [
+            "html",
+            "css",
+            "php",
+            "sql"
+        ],
         "github": "https://github.com/joaquinogallar/fragantica-rest-main",
         "finished": true,
         "details": {
@@ -189,4 +209,3 @@
         }
     }
 ]
-
