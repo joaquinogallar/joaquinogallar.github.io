@@ -1,40 +1,7 @@
-const URL_PROJECTS = "./assets/data.json";
+import ProjectService from "./project-service.js";
+
 const d = document;
 
-export default class ProjectService {
-  static async fetchProjects() {
-    try {
-      const response = await fetch(URL_PROJECTS);
-      if (!response.ok) {
-        throw new Error("Can not load projects");
-      }
-      return await response.json();
-    } catch (error) {
-      console.error("Error fetching projects:", error);
-      return [];
-    }
-  }
-
-  static async findById(id) {
-    try {
-      const data = await this.fetchProjects();
-
-      const project = data.find((proj) => proj.id === id);
-
-      if (!project) {
-        console.log(`Project with id: ${id} does not exists.`);
-        return null;
-      }
-
-      return project;
-    } catch (error) {
-      console.error("Error fetching project by id:", error);
-      return null;
-    }
-  }
-}
-
-// render porjects class
 class ProjectRenderer {
   constructor(containerSelector) {
     this.$container = d.querySelector(containerSelector);
@@ -43,12 +10,21 @@ class ProjectRenderer {
   _createProjectImage(imageUrl, status) {
     const projContainer = d.createElement("div");
     projContainer.classList.add("me-e-c-container");
-    const projImg = d.createElement("img");
-    projImg.classList.add("me-e-c-img");
-    projImg.src = imageUrl;
+    const projectVisual = imageUrl
+      ? d.createElement("img")
+      : d.createElement("div");
+
+    projectVisual.classList.add("me-e-c-img");
+    if (imageUrl) {
+      projectVisual.src = imageUrl;
+      projectVisual.alt = "Project preview";
+    } else {
+      projectVisual.classList.add("me-e-c-placeholder");
+      projectVisual.setAttribute("aria-label", "Project preview unavailable");
+    }
 
     projContainer.appendChild(this._createStatusContainer(status));
-    projContainer.appendChild(projImg);
+    projContainer.appendChild(projectVisual);
     return projContainer;
   }
 
@@ -127,6 +103,8 @@ class ProjectRenderer {
     ghLink.id = "gh-link";
     ghLink.href = githubLink;
     ghLink.target = "_blank";
+    ghLink.rel = "noopener";
+    ghImg.alt = "";
     ghLink.append(ghImg, " GitHub");
 
     const moreLink = d.createElement("a");
@@ -185,13 +163,6 @@ class ProjectRenderer {
 
       this.$container.append(...projectElements);
     }
-  }
-}
-
-class ProjectRenderById {
-  constructor(containerSelector, id) {
-    this.$container = d.querySelector(containerSelector);
-    this.id = id;
   }
 }
 
@@ -271,12 +242,6 @@ class ProjectPaginator {
 document.addEventListener("DOMContentLoaded", async () => {
   const projectPaginator = new ProjectPaginator(".me-experiences-container");
   projectPaginator.initialize();
-
-  //test
-  //
-  //
-  // me-experience
-  // me-projects
 
   let meProfessionalExperience = d.getElementById("me-professional-experience");
   let meProjectsExperience = d.getElementById("me-projects-experience");
