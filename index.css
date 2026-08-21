@@ -68,7 +68,7 @@ body {
 }
 
 section {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 button {
